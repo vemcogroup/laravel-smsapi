@@ -1,6 +1,6 @@
 {
     "name": "vemcogroup/laravel-smsapi",
-    "description": "Laravel ServiceProvider and Facade for SmsApi",
+    "description": "Laravel implementation to easy sent sms via SMSAPI",
     "keywords": [
         "sms",
         "laravel",
