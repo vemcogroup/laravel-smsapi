@@ -1,0 +1,24 @@
+{
+    "name": "vemcogroup/laravel-smsapi",
+    "description": "Laravel ServiceProvider and Facade for SmsApi",
+    "keywords": [
+        "sms",
+        "laravel",
+        "smsapi"
+    ],
+    "homepage": "https://github.com/vemcogroup/laravel-smsapi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henrik B Hansen",
+            "email": "hbh@vemcount.com",
+            "homepage": "https://www.vemcogroup.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^6.0|^7.0",
+        "smsapi/php-client": "^2.0"
+    }
+}
