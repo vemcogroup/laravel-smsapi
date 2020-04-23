@@ -15,6 +15,7 @@ class SmsApi
 
             $sms = SendSmsBag::withMessage($to, $message);
             $sms->from = $from;
+            $sms->normalize = true;
 
             $service = (new SmsapiHttpClient())->smsapiComService($apiToken);
             $service->smsFeature()->sendSms($sms);
