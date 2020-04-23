@@ -7,6 +7,10 @@
 
 This package allows you to quickly send SMS in Laravel via the SMSAPI service.
 
+This is first version and only support to send SMS.
+
+Further versions will support more of SMSAPI features. 
+
 Remember to register an account at [SMSAPI](https://www.smsapi.com/en/signup) before using this package.
 
 ## Installation
