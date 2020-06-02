@@ -3,12 +3,13 @@
 namespace Vemcogroup\SmsApi;
 
 use Smsapi\Client\SmsapiHttpClient;
+use Smsapi\Client\Feature\Sms\Data\Sms;
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Vemcogroup\SmsApi\Exceptions\SmsApiException;
 
 class SmsApi
 {
-    public static function send($to, $from, $message): void
+    public static function send($to, $from, $message): Sms
     {
         try {
             $apiToken = config('smsapi.token');
@@ -18,7 +19,8 @@ class SmsApi
             $sms->normalize = true;
 
             $service = (new SmsapiHttpClient())->smsapiComService($apiToken);
-            $service->smsFeature()->sendSms($sms);
+
+            return $service->smsFeature()->sendSms($sms);
         } catch(SmsApiException $e) {
             throw SmsApiException::communicationError($e->getMessage());
         }
