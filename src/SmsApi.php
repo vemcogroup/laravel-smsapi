@@ -2,8 +2,7 @@
 
 namespace Vemcogroup\SmsApi;
 
-use Smsapi\Client\SmsapiHttpClient;
-use Smsapi\Client\Feature\Sms\Data\Sms;
+use Smsapi\Client\Curl\SmsapiHttpClient;
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Vemcogroup\SmsApi\Exceptions\SmsApiException;
 
