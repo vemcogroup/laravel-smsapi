@@ -14,5 +14,5 @@ return [
     */
 
     'token' => env('SMSAPI_TOKEN'),
-
+    'version' => env('SMSAPI_VERSION')
 ];

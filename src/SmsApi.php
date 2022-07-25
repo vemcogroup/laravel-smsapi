@@ -16,8 +16,13 @@ class SmsApi
             $sms = SendSmsBag::withMessage($to, $message);
             $sms->from = $from;
             $sms->normalize = true;
+            $serviceVersion = config('smsapi.version');
 
-            $service = (new SmsapiHttpClient())->smsapiComService($apiToken);
+            if ('pl' === strtolower($serviceVersion)) {
+                $service = (new SmsapiHttpClient())->smsapiPlService($apiToken);
+            } else {
+                $service = (new SmsapiHttpClient())->smsapiComService($apiToken);
+            }
 
             return $service->smsFeature()->sendSms($sms);
         } catch(SmsApiException $e) {
